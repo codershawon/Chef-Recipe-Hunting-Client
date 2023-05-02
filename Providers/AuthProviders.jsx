@@ -9,6 +9,7 @@ const AuthProviders = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const createUser = (email, password) => {
+    setLoading(true)
     return createUserWithEmailAndPassword(auth, email, password);
   };
   const signInUser = (email, password) => {
@@ -42,7 +43,8 @@ const AuthProviders = ({ children }) => {
     signInUser,
     signInWithGoogle,
     signInWithGitHub,
-    logout
+    logout,
+    loading
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
