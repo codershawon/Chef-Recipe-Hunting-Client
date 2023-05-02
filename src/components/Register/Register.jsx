@@ -7,13 +7,13 @@ import "./Register.css"
 import { ToastContainer, toast } from 'react-toastify';
 const Register = () => {
     const [error, setError] = useState("");
+    const[success,setSuccess]=useState("")
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [control, setControl] = useState(false);
     const [show, setShow] = useState(false);
     const { user, createUser } = useContext(AuthContext);
-    console.log(user, createUser);
     const handleRegister = (e) => {
       e.preventDefault();
       const form = e.target;
@@ -36,9 +36,10 @@ const Register = () => {
           const loggedUser = result.user;
           console.log(loggedUser);
           form.reset();
+          setSuccess(toast.success("Your registration in FoodiesHub website is successful"))
         })
-        .catch((error) => {
-          setError(error.message);
+        .catch(() => {
+          setError(toast.error("Your registration in FoodiesHub website is unsuccessful. Please try again!!"));
         });
     };
   

@@ -9,6 +9,8 @@ import Login from "./components/Login/Login.jsx";
 import AuthProviders from "../Providers/AuthProviders.jsx";
 import Register from "./components/Register/Register.jsx";
 import 'react-toastify/dist/ReactToastify.css';
+import PrivateRoutes from "./PrivateRoutes/PrivateRoutes.jsx";
+import Blog from "./components/Blog/Blog.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -16,7 +18,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>,
+        element: <PrivateRoutes><Home></Home></PrivateRoutes>,
       },
       {
         path: "/login",
@@ -25,6 +27,10 @@ const router = createBrowserRouter([
       {
         path:"/register",
         element:<Register></Register>
+      },
+      {
+        path:"/blog",
+        element:<PrivateRoutes><Blog></Blog></PrivateRoutes>
       }
     ],
   },
