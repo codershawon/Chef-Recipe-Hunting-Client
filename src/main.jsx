@@ -11,10 +11,12 @@ import Register from "./components/Register/Register.jsx";
 import 'react-toastify/dist/ReactToastify.css';
 import PrivateRoutes from "./PrivateRoutes/PrivateRoutes.jsx";
 import Blog from "./components/Blog/Blog.jsx";
+import RouteError from "./components/RouteError/RouteError.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement:<RouteError></RouteError>,
     children: [
       {
         path: "/",
