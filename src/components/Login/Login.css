@@ -1,0 +1,40 @@
+.formLogin {
+    box-sizing: border-box;
+    border: 1px solid #95a0a7;
+    border-radius: 8px;
+    margin: 30px auto;
+    width: 500px;
+    height: 700px;
+  }
+  .titleFont {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 500;
+  }
+  .formDetails {
+    padding: 42px;
+  }
+  .inputField {
+    background-color: rgba(255, 255, 255, 0.87);
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #95a0a7;
+  }
+  .button {
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(255, 153, 0, 0.3);
+    border-radius: 5px;
+    align-items: center;
+  }
+  .hr{
+    border: 1px solid #95A0A7;
+  }
+  .googleBtn{
+    border: 1px solid #95a0a7;
+    border-radius: 8px;
+  }
+  

@@ -1,13 +1,14 @@
 import React, { useContext, useState } from "react";
 import "./Login.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { AuthContext } from "../Providers/AuthProviders";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash} from "@fortawesome/free-solid-svg-icons";
+import { AuthContext } from "../../../Providers/AuthProviders";
 const Login = () => {
   const [error, setError] = useState("");
+  const [password, setPassword] = useState("");
   const[control,setControl]=useState(false)
-  const { signIn } = useContext(AuthContext);
+  const { signInUser } = useContext(AuthContext);
   const Navigate=useNavigate()
   const location=useLocation()
   console.log(location)
@@ -19,7 +20,7 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    signIn(email, password)
+    signInUser(email, password)
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
@@ -31,7 +32,7 @@ const Login = () => {
       });
   };
   return (
-    <div className="form w-[500px] h-[550px]">
+    <div className="formLogin">
       <h1 className="titleFont">Login</h1>
       <form onSubmit={handleLogin} className="formDetails">
         <h2 className="mb-3">Email</h2>
@@ -76,12 +77,12 @@ const Login = () => {
             
           </>
         )}
-        <button className="button w-full mt-10">Login</button>
+        <button className="button w-full mt-10 font-semibold">Login</button>
         <p className="text-center mt-3">
-          New to Ema-John?{" "}
-          <Link to="/signUp">
+         Don't have an account?{" "}
+          <Link to="/register">
             <button className="text-yellow-800 font-semibold">
-              Create New Account
+              Create an account
             </button>
           </Link>
         </p>
@@ -98,6 +99,14 @@ const Login = () => {
           />
           <span>Continue With Google</span>
         </button>
+        <button className="googleBtn flex justify-center items-center mx-auto w-full p-2 mt-8">
+          <img
+            className="w-[32px] h-[32px] mr-2"
+            src="https://i.ibb.co/GtNwXBL/Git-Hub-Mark-removebg-preview.png"
+            alt=""
+          />
+          <span>Continue With GitHub</span>
+        </button>
         <p>{error}</p>
       </form>
     </div>
@@ -105,3 +114,4 @@ const Login = () => {
 };
 
 export default Login;
+ 
