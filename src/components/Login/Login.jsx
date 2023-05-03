@@ -22,6 +22,7 @@ const Login = () => {
         const user = result.user;
         console.log(user);
         setSuccess(toast.success("SignIn With Google Successful"));
+        Navigate(from, { replace: true });
       })
       .catch(() => {
         setError(
@@ -36,6 +37,7 @@ const Login = () => {
         const user = result.user;
         console.log(user);
         setSuccess(toast.success("SignIn With GitHub Successful"));
+        Navigate(from, { replace: true });
       })
       .catch(() => {
         setError(
