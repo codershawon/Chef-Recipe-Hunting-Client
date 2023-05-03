@@ -12,6 +12,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import PrivateRoutes from "./PrivateRoutes/PrivateRoutes.jsx";
 import Blog from "./components/Blog/Blog.jsx";
 import RouteError from "./components/RouteError/RouteError.jsx";
+import ChefRecipesPage from "./components/Layout/ChefRecipesPage.jsx";
+import ChefRecipes from "./components/chefRecipes/chefRecipes.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,7 +37,17 @@ const router = createBrowserRouter([
         element:<PrivateRoutes><Blog></Blog></PrivateRoutes>
       }
     ],
-  },
+  },{
+    path:"/chef",
+    element:<ChefRecipesPage></ChefRecipesPage>,
+    children:[
+      {
+        path:"/chef/:id",
+        element:<ChefRecipes></ChefRecipes>,
+        loader:({params})=>fetch(`http://localhost:3000/chef/${params.id}`)
+      }
+    ]
+  }
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
