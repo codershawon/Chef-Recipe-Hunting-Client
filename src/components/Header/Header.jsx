@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Providers/AuthProviders";
 
 const Header = () => {
-  const { user,logout } = useContext(AuthContext);
-  const handleLogout=()=>{
+  const { user, logout } = useContext(AuthContext);
+  const handleLogout = () => {
     logout()
-    .then()
-    .catch(error=>console.log(error))
-  }
+      .then()
+      .catch((error) => console.log(error));
+  };
   return (
     <div className="navbar bg-[rgba(255, 255, 255, 0.87)] shadow shadow-2xl mx-auto flex justify-around">
       <div className="navbar-start">
@@ -55,14 +55,15 @@ const Header = () => {
         </div>
         {user ? (
           <>
-            <img
-              className="w-10 h-10"
-              src={user.photoURL}
-              alt=""
-            />
+             <div title={user.displayName}>
+             <img className="w-10 h-10" src={user.photoURL} alt="" />
+             </div>
             <Link to="/register">
               {" "}
-              <button onClick={handleLogout} className="btn btn-outline btn-info h-5 ml-3">
+              <button
+                onClick={handleLogout}
+                className="btn btn-outline btn-info h-5 ml-3"
+              >
                 Logout
               </button>
             </Link>
