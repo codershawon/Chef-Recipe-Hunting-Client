@@ -22,13 +22,13 @@ const ChefRecipes = () => {
             </div>
             </div>
             <div>
-            <h1 className='text-center text-5xl font-bold mt-20'>About Selected Chef</h1>
+            <h1 className='text-center text-5xl font-bold mt-20'>Special Recipes Of Selected Chef</h1>
                 <div className='grid grid-cols-3 gap-4 ml-40 mr-36 mb-4 mt-7'>
                 {
                     foodRecipes.map(recipes=><FoodRecipes key={recipes.id} recipes={recipes}></FoodRecipes>)
                 }
                 </div>
-                <Link to="/"><button className="btn btn-active ml-40">Go Back</button></Link>
+                <Link to="/"><button className="btn btn-active ml-40 mb-5">Go Back</button></Link>
             </div>
             <ToastContainer></ToastContainer>
         </div>

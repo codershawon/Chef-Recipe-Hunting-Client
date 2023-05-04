@@ -50,7 +50,7 @@ const Register = () => {
           toast.success("Your registration in FoodiesHub website is successful")
         );
       })
-      .catch(() => {
+      .catch((error) => {
         setError(
           toast.error(
             "Your registration in FoodiesHub website is unsuccessful. Please try again!!"
@@ -133,9 +133,9 @@ const Register = () => {
         )}
         <h2 className="mb-1">Photo URL</h2>
         <input type="text" name="photo" className="inputField w-full mb-2" />
-        <Link to="/login"><button className="button w-full mt-8 font-semibold">
+        <button className="button w-full mt-8 font-semibold">
           Create an account
-        </button></Link>
+        </button>
         <p className="text-center mt-3">
           Already have an account?{" "}
           <Link to="/login">
@@ -168,5 +168,4 @@ const Register = () => {
     </div>
   );
 };
-
 export default Register;
