@@ -133,9 +133,9 @@ const Register = () => {
         )}
         <h2 className="mb-1">Photo URL</h2>
         <input type="text" name="photo" className="inputField w-full mb-2" />
-        <button className="button w-full mt-8 font-semibold">
+        <Link to="/login"><button className="button w-full mt-8 font-semibold">
           Create an account
-        </button>
+        </button></Link>
         <p className="text-center mt-3">
           Already have an account?{" "}
           <Link to="/login">

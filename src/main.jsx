@@ -38,13 +38,13 @@ const router = createBrowserRouter([
       }
     ],
   },{
-    path:"/chef",
+    path:"/foodRecipes",
     element:<ChefRecipesPage></ChefRecipesPage>,
     children:[
       {
-        path:"/chef/:id",
+        path:"/foodRecipes/:id",
         element:<ChefRecipes></ChefRecipes>,
-        loader:({params})=>fetch(`http://localhost:3000/chef/${params.id}`)
+        loader:({params})=>fetch(`https://chef-recipe-hunting-server-side-codershawon.vercel.app/foodRecipes/${params.id}`)
       }
     ]
   }

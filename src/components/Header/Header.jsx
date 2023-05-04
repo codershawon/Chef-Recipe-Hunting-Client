@@ -57,7 +57,7 @@ const Header = () => {
           <>
             <img
               className="w-10 h-10"
-              src="https://i.ibb.co/pzbCZyg/photo-1511367461989-f85a21fda167-removebg-preview.png"
+              src={user.photoURL}
               alt=""
             />
             <Link to="/register">
