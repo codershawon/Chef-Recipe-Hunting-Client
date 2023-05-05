@@ -1,11 +1,24 @@
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 import React from "react";
 const Blog = () => {
+  const generatePdf = () => {
+    const input = document.getElementById('blogContent');
+    html2canvas(input).then((canvas) => {
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF();
+      pdf.addImage(imgData, 'PNG', 0, 0);
+      pdf.save('download.pdf');
+    });
+  };
+  
   return (
-    <div className="w-[640px] lg:w-auto">
-      <h1 className="text-center text-3xl font-semibold text-white mt-3 p-2 bg-yellow-600">
+    <div>
+    <div className="w-[640px] lg:w-auto" id="blogContent">
+      <h1 className="text-center text-3xl font-semibold text-white mt-3 p-2 bg-yellow-600 ml-16 lg:ml-0 w-[640px] lg:w-full">
         Some Important Questions with Answers
       </h1>
-      <div className="card w-[1400px] bg-slate-200 shadow-xl mx-auto mt-3">
+      <div className="card w-[640px] lg:w-[1400px] bg-slate-200 shadow-xl mx-auto mt-3 ml-16 lg:ml-44">
         <div className="card-body">
           <h2 className="card-title text-2xl">
             1. Tell us the differences between uncontrolled and controlled
@@ -25,7 +38,7 @@ const Blog = () => {
           </p>
         </div>
       </div>
-      <div className="card w-[1400px] bg-slate-200 shadow-xl mx-auto mt-3">
+      <div className="card w-[640px] lg:w-[1400px] bg-slate-200 shadow-xl mx-auto mt-3 ml-16 lg:ml-44">
         <div className="card-body">
           <h2 className="card-title text-2xl">
             2. How to validate React props using PropTypes?
@@ -42,7 +55,7 @@ const Blog = () => {
           </p>
         </div>
       </div>
-      <div className="card w-[1400px] bg-slate-200 shadow-xl mx-auto mt-3">
+      <div className="card w-[640px] lg:w-[1400px] bg-slate-200 shadow-xl mx-auto mt-3 ml-16 lg:ml-44">
         <div className="card-body">
           <h2 className="card-title text-2xl">
             3. Tell us the difference between nodejs and express js.
@@ -63,7 +76,7 @@ const Blog = () => {
           </p>
         </div>
       </div>
-      <div className="card w-[1400px] bg-slate-200 shadow-xl mx-auto mt-3 mb-4">
+      <div className="card w-[640px] lg:w-[1400px] bg-slate-200 shadow-xl mx-auto mt-3 mb-4 ml-16 lg:ml-44">
         <div className="card-body">
           <h2 className="card-title text-2xl">
             4. What is a custom hook, and why will we create a custom hook?
@@ -84,8 +97,9 @@ const Blog = () => {
           </p>
         </div>
       </div>
-      <button className="ml-40 btn btn-active mb-5">DOWNLOAD PDF</button>
     </div>
+     <button onClick={generatePdf} className=" ml-16 lg:ml-40 btn btn-active mb-5">DOWNLOAD PDF</button>
+     </div>
   );
 };
 
