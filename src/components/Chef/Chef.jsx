@@ -1,6 +1,6 @@
 import React from "react";
 import LazyLoad from "react-lazy-load";
-import { Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
 
 const Chef = ({ chef }) => {
   const { id, name, picture, experience, recipes, likes } = chef;
@@ -33,7 +33,7 @@ const Chef = ({ chef }) => {
                 <span className="text-[#757575] font-semibold">{likes}</span>{" "}
               </span>
             </p>
-            <Link to={`/foodRecipes/${id}`}>
+            <Link to={`/foodRecipes/${id}`} activeClassName="active">
               {" "}
               <button className="btn btn-outline btn-secondary -mt-2">
                 View Recipes

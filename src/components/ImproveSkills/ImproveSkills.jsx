@@ -13,7 +13,7 @@ const ImproveSkills = () => {
                 <p className="border-s-4 border-pink-500 rounded mb-3"><span className='ml-2 text-[#757575] font-semibold'>Know nutrition facts</span></p>
                 <p className="border-s-4 border-pink-500 rounded mb-3"><span className='ml-2 text-[#757575] font-semibold'>Get cooking tips</span></p>
                 <p className="border-s-4 border-pink-500 rounded mb-5"><span className='ml-2 text-[#757575] font-semibold'>Get ranked</span></p>
-                <Link to="/register"><button className="btn btn-outline btn-secondary">SIGNUP NOW</button></Link>
+                <Link to="/register" activeClassName><button className="btn btn-outline btn-secondary">SIGNUP NOW</button></Link>
             </div>
         </div>
         <p className='w-[620px] mx-40  text-[#757575] font-semibold'><span className='font-bold text-5xl text-pink-500'>“</span>Food is everything we are. It’s an extension of nationalist feeling, ethnic feeling, your personal history, your province, your region, your tribe, your grandma. It’s inseparable from those from the get-go.<br></br><span className='ml-96 mt-10'> -Anthony Bourdain</span></p>

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../../Providers/AuthProviders";
-
+import "./Header.css"
 const Header = () => {
   const { user, logout } = useContext(AuthContext);
   const handleLogout = () => {
@@ -10,7 +10,7 @@ const Header = () => {
       .catch((error) => console.log(error));
   };
   return (
-    <div className="navbar bg-[rgba(255, 255, 255, 0.87)] shadow shadow-2xl mx-auto flex justify-around">
+    <div className="navbar bg-[rgba(255, 255, 255, 0.87)] shadow shadow-2xl mx-auto flex justify-around w-full ">
       <div className="navbar-start">
         <div className="navbar-center flex items-center text-3xl font-bold">
           <img
@@ -46,10 +46,10 @@ const Header = () => {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-slate-200 rounded-box w-52 text-2xl font-bold"
           >
             <li>
-              <Link to="/">Home</Link>
+              <NavLink to="/" activeClassName="active">Home</NavLink>
             </li>
             <li>
-              <Link to="/blog">Blog</Link>
+              <NavLink to="/blog" activeClassName="active">Blog</NavLink>
             </li>
           </ul>
         </div>
@@ -58,7 +58,7 @@ const Header = () => {
              <div title={user.displayName}>
              <img className="w-10 h-10" src={user.photoURL} alt="" />
              </div>
-            <Link to="/register">
+            <NavLink to="/register" activeClassName="active">
               {" "}
               <button
                 onClick={handleLogout}
@@ -66,13 +66,13 @@ const Header = () => {
               >
                 Logout
               </button>
-            </Link>
+            </NavLink>
           </>
         ) : (
-          <Link to="/login">
+          <NavLink to="/login"  activeClassName="active">
             {" "}
             <button className="btn btn-outline btn-info h-5 ml-3">Login</button>
-          </Link>
+          </NavLink>
         )}
       </div>
     </div>

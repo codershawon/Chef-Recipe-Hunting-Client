@@ -84,7 +84,9 @@ const Blog = () => {
           </p>
         </div>
       </div>
+      <button className="ml-40 btn btn-active mb-5">DOWNLOAD PDF</button>
     </div>
+
   );
 };
 
