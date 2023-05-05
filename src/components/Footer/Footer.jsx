@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="footer p-10 bg-base-300 text-base-content flex justify-around flex-wrap lg-flex-row sm-flex-col ">
+    <footer className="footer p-10 bg-base-300 text-base-content flex-col lg:flex-none justify-around flex-wrap lg-flex-row sm-flex-col w-[850px] lg:w-auto -ml-24 lg:-ml-0">
       <div>
         <h4 className="footer-title">www.foodiesHub.com</h4>
         <p className="w-96">Foodies Hub is a place where you can pleased your soul and tummy with delicious food recipes. And our services are absolutely free.</p>

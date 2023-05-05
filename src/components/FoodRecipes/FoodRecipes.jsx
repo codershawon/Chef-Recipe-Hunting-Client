@@ -40,7 +40,7 @@ const FoodRecipes = ({ recipes }) => {
             ))}
           </ul>
         </p>
-        <p className="w-96 mb-3 mt-5">
+        <p className="w-96 mb-3 mt-3 ">
           <span className="font-bold border-s-4 border-pink-500 rounded">
             <span className="ml-2">Cooking method:</span>{" "}
           </span>{" "}

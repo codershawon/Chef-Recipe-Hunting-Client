@@ -10,7 +10,7 @@ const Header = () => {
       .catch((error) => console.log(error));
   };
   return (
-    <div className="navbar bg-[rgba(255, 255, 255, 0.87)] shadow shadow-2xl mx-auto flex justify-around w-full ">
+    <div className="navbar bg-[rgba(255, 255, 255, 0.87)] shadow shadow-2xl mx-auto flex justify-around w-[640px] lg:w-full ml-16 lg:ml-0">
       <div className="navbar-start">
         <div className="navbar-center flex items-center text-3xl font-bold">
           <img

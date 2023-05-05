@@ -7,7 +7,7 @@ const Chef = ({ chef }) => {
   console.log(chef);
   return (
     <div className="flex">
-      <div className="card w-[450px] bg-gray-300 shadow-xl">
+      <div className="card w-[640px] lg:w-[450px] -ml-24 lg:-ml-0 bg-gray-300 shadow-xl">
           <LazyLoad>
             <figure>
               <img className="w-full" src={picture} alt="Shoes" />
@@ -33,12 +33,14 @@ const Chef = ({ chef }) => {
                 <span className="text-[#757575] font-semibold">{likes}</span>{" "}
               </span>
             </p>
-            <Link to={`/foodRecipes/${id}`} activeClassName="active">
+           <div className="mr-60 lg:mr-0 w-96 mt-4 lg:mt-0 lg:w-auto">
+           <Link to={`/foodRecipes/${id}`} activeClassName="active">
               {" "}
               <button className="btn btn-outline btn-secondary -mt-2">
                 View Recipes
               </button>
             </Link>
+           </div>
           </div>
         </div>
       </div>

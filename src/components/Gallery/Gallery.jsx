@@ -3,8 +3,8 @@ import React from 'react';
 const Gallery = () => {
   return (
     <div>
-      <h1 className='text-center text-5xl font-bold mt-7 mb-6'>Gallery</h1>
-      <div className='grid grid-cols-3 mx-36 mb-10'>
+      <h1 className='text-start lg:text-center text-5xl font-bold mt-7 mb-6 ml-12 lg:ml-0'>Gallery</h1>
+      <div className='grid lg:grid-cols-3 mx-36 mb-10 w-[640px] lg:w-auto ml-14 lg:ml-40'>
         <img
           className='w-full hover:opacity-90 transition-opacity duration-300'
           src='https://images.unsplash.com/photo-1592861956120-e524fc739696?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
