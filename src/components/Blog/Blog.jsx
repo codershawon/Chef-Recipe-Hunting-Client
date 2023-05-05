@@ -1,7 +1,7 @@
 import React from "react";
 const Blog = () => {
   return (
-    <div>
+    <div className="w-[640px] lg:w-auto">
       <h1 className="text-center text-3xl font-semibold text-white mt-3 p-2 bg-yellow-600">
         Some Important Questions with Answers
       </h1>
@@ -86,7 +86,6 @@ const Blog = () => {
       </div>
       <button className="ml-40 btn btn-active mb-5">DOWNLOAD PDF</button>
     </div>
-
   );
 };
 

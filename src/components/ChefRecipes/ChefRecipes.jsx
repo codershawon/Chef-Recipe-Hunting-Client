@@ -10,8 +10,8 @@ const ChefRecipes = () => {
     const foodRecipes=chefRecipes.featured_recipe;
     return (
         <div>
-        <div className='flex justify-around items-center mt-5  mb-5'>
-            <img className='w-[500px] rounded-lg' src={picture} 
+        <div className='flex flex-col lg:flex-row justify-around items-center mt-5 mb-5'>
+            <img className='w-[640px] lg:[450px] rounded-lg ml-32 lg:ml-10' src={picture} 
             alt="" />
             <div className='leading-7'>
             <h2 className="border-s-4 border-pink-500 rounded mb-3"><span className="ml-2 font-bold">Name:</span> <span className="text-[#757575] font-semibold">{name}</span></h2>
@@ -22,13 +22,13 @@ const ChefRecipes = () => {
             </div>
             </div>
             <div>
-            <h1 className='text-center text-5xl font-bold mt-20'>Special Recipes Of Selected Chef</h1>
-                <div className='grid grid-cols-3 gap-4 ml-40 mr-36 mb-4 mt-7'>
+            <h1 className='text-start lg:text-center text-5xl font-bold mt-20 w-96 ml-20 lg:ml-0 lg:w-auto'>Special Recipes Of Selected Chef</h1>
+                <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 ml-40 mr-36 mb-4 mt-7'>
                 {
                     foodRecipes.map(recipes=><FoodRecipes key={recipes.id} recipes={recipes}></FoodRecipes>)
                 }
                 </div>
-                <Link to="/"><button className="btn btn-active ml-40 mb-5">Go Back</button></Link>
+                <div className='-ml-20 lg:-ml-0'><Link to="/"><button className="btn btn-active ml-40 mb-5">Go Back</button></Link></div>
             </div>
             <ToastContainer></ToastContainer>
         </div>

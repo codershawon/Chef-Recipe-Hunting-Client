@@ -19,7 +19,7 @@ const FoodRecipes = ({ recipes }) => {
   };
 
   return (
-    <div className="card w-[450px] bg-gray-300 shadow-xl">
+    <div className="card w-[640px] lg:w-[450px] -ml-20 lg:-ml-0 bg-gray-300 shadow-xl">
       <figure>
         <img className="w-full h-60" src={image} alt="Shoes" />
       </figure>

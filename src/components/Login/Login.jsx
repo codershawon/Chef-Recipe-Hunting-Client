@@ -64,7 +64,7 @@ const Login = () => {
   };
 
   return (
-    <div className="formLogin">
+    <div className="formLogin w-[640px] lg:w-[500px] ml-16 lg:ml-[600px] mt-4 mb-4">
       <h1 className="titleFont">Login</h1>
       <form onSubmit={handleLogin} className="formDetails">
         <h2 className="mb-3">Email</h2>

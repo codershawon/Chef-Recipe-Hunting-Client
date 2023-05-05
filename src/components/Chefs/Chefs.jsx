@@ -11,7 +11,7 @@ const Chefs = () => {
     },[])
     return (
         <div>
-            <h1 className='text-center text-5xl font-bold mt-10 mb-5 -ml-16 lg:ml-0 w-full'>OUR CHEFS</h1>
+            <h1 className='text-center text-5xl font-bold mt-10 mb-5 -ml-32 lg:ml-0 w-full'>OUR CHEFS</h1>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 ml-40 mr-36 mb-4'>
             {
                 chefs.map((chef=><Chef key={chef.id} chef={chef}></Chef>))

@@ -14,7 +14,6 @@ import Blog from "./components/Blog/Blog.jsx";
 import RouteError from "./components/RouteError/RouteError.jsx";
 import ChefRecipesPage from "./components/Layout/ChefRecipesPage.jsx";
 import ChefRecipes from "./components/chefRecipes/chefRecipes.jsx";
-import { PDFViewer } from "@react-pdf/renderer";
 const router = createBrowserRouter([
   {
     path: "/",
